@@ -17,3 +17,10 @@ The VBM generator is written using python
 ### Preperation
 Before run this programme, you need to download [FFmpeg](http://ffmpeg.org/download.html) on your computer and put the \<bin> folder into your computer's search path so that the `ffmpeg.exe` can be used in command line mode.
 ### Usage
++ Open `codes/run.py`.
++ Edit `video_path`, which is the path of the omnidirectional video.
++ Edit `frame_out_path`, which is the temporary folder for frames and sound file and will be removed after running this programme.
++ Edit `videop_path`, which is the path for the output VBM video.
++ Edit `viewport_path`, which is the path for the viewpoint file, noting that it should be one of the file in `database/viewpoints_new` because the `reprojection.py` needs *`(roll, pitch, yaw)`* as one of parameters.
++ Run the `run.py`
+
