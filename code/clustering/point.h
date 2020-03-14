@@ -7,7 +7,7 @@ class Point {
 public:
     double x, y, z, vx, vy, vz; //x,y,z: position of the viewport; vx, vy, vz: speed of user's view in x, y, z direction
     int ptsCnt, cluster;    //ptsCnt: number of points in the neighbourhood; cluster: the index of the group to which the point belongs
-    double w;   //weight for position and speed in distance calculation
+    double w;   //weight for distance and velocity in calculation
     /*
     Point(double x, double y, double z, double vx, double vy, double vz, int ptsCnt, int cluster, double w) {
         this->x = x;

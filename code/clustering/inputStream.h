@@ -20,17 +20,20 @@ public:
     double min_dis = 100;
     int point_num = 0;
     int folder_num = 0;
+    float w;
 
     /***
     read viewport files that contain viewport data(x, y, z) and divided them into vector<vector<Point>> according to users
     :param path: path that contains all users viewport file
     :param filename: name of the video's viewport file
     :param num: number of the viewport data to read in each user's file
+    :param w: weight for position and speed in distance calculation
     ***/
-    InputReader(string path, string filename, int num) {
+    InputReader(string path, string filename, int num, float w) {
         folders = vector<string>();
         points = vector<vector<Point>>();
         point_num = num;
+        this->w = w;
         long hFile = 0;
         struct _finddata_t fileInfo;    //file info
 
@@ -73,7 +76,7 @@ public:
                 //Point newp(x, y, z, vx, vy, vz, 0, NOT_CLASSIFIED, 0.5);
 
                 //saved as a new point
-                newFile.at(i) = { x, y, z, vx, vy, vz, 0, NOT_CLASSIFIED, 0.8};
+                newFile.at(i) = { x, y, z, vx, vy, vz, 0, NOT_CLASSIFIED, w};
             }
             points.push_back(newFile);
 
