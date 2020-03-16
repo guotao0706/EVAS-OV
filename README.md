@@ -8,7 +8,7 @@ This is a demo for Edge-assisted Viewport Adaptive Scheme for real-time Omnidire
   + A programme to cluster users into groups using DBSCAN algorithm based on their viewport.
 
 ## Omnidirectional video
-The 5 omnidirectional videos are stored in `database/videos`. Each video is a `3840 * 2080` 4K omnidirectional video with a duration of 20 seconds. They are from a open-source dataset ["360-degree video head movement dataset"](https://dl.acm.org/doi/abs/10.1145/3083187.3083215) by Kan N, Liu C, Zou J, et al.
+The 5 omnidirectional videos are stored in `database/videos`. Each video is a `3840 * 2048` 4K omnidirectional video with a duration of 20 seconds. They are from a open-source dataset ["360-degree video head movement dataset"](https://dl.acm.org/doi/abs/10.1145/3083187.3083215) by Kan N, Liu C, Zou J, et al.
 ## Viewpoint data
 The corresponding viewpoint dataset of 59 users extracted at 30 times per second. The original data is stored in `database\results` in which viewpoint is stored as *`(q0, q1, q2, q3)`* 4-dimension data. The data in `database\viewpoint_xyz` contains the viewpoint data stored as *`(x, y, z)`* coordinates of euclidean space. The data in `database\viewpoint_new` contains the viewpoint data stored as *`(roll, pitch, yaw)`* coordinates of Euler pt.
 
